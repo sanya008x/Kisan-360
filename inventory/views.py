@@ -481,21 +481,21 @@ def weather_forecast(request):
     
     # Sample Data for Next 1 Day, Week, Month
     sample_next_1_day = {
-        "date": "February 26, 2024",
+        "date": "May 16, 2025",
         "rainfall_prediction": 30,
         "sunlight_percentage": 60,
         "expected_rainfall": 5
     }
     
     sample_next_1_week = {
-        "date_range": "February 26, 2024 - March 4, 2024",
+        "date_range": "May 16, 2025 - May 23, 2025",
         "average_rainfall_prediction": 25,
         "average_sunlight_percentage": 65,
         "expected_weekly_rainfall": 20
     }
     
     sample_next_1_month = {
-        "date_range": "February 26, 2024 - March 26, 2024",
+        "date_range": "May 16, 2025 - June 16, 2025",
         "average_rainfall_prediction": 20,
         "average_sunlight_percentage": 70,
         "expected_monthly_rainfall": 80
