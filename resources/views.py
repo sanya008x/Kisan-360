@@ -31,7 +31,8 @@ def chat_with_ai(request):
 
 
 def get_ai_response(cropType,landArea,season,soilquality):
-    genai.configure(api_key="AIzaSyA-5tc2WQH7DLs6bCDlIROOCSjWsVrwDa0")  # Set up your API key
+    # genai.configure(api_key="AIzaSyA-5tc2WQH7DLs6bCDlIROOCSjWsVrwDa0")  # Set up your API key
+    genai.configure(api_key="AIzaSyAJxXaHjU7cjBCFbaAzxTnDbh_ClEMRqW4")  # Set up your API key
     generation_config = {  # Your generation config
         "temperature": 0.1,
         "top_p": 1,
@@ -45,7 +46,8 @@ def get_ai_response(cropType,landArea,season,soilquality):
         },
         # Add other settings as needed
     ]
-    model = genai.GenerativeModel(model_name="gemini-1.0-pro",
+    # model = genai.GenerativeModel(model_name="gemini-1.0-pro",
+    model = genai.GenerativeModel(model_name="gemini-2.0-flash-lite",
                                   generation_config=generation_config,
                                   safety_settings=safety_settings)
     convo = model.start_chat(history=[])
