@@ -1,3 +1,61 @@
+# from django.shortcuts import render
+# from twilio.rest import Client
+
+# # Create your views here.
+# from django.shortcuts import render
+
+# # Create your views here.
+# def season(request):
+#     return render(request, 'pages/season.html')
+    
+# def send_report_via_sms():
+#     account_sid = 'AC8ff1c391e4daaab4fd0a0d0faa4bab65'
+
+#     auth_token = '6788fb86455a09456a2be591a4165109'
+#     client = Client(account_sid, auth_token)
+
+#     message = client.messages.create(
+#     from_='+19893941530',
+#             body = f'''नमस्ते, आर्यन
+#                     उत्पाद का नाम: मक्का 🌽
+#                     समाप्ति तिथि: कल, 26-02-2024
+
+#                     उत्पाद का नाम: ज्वार 🌱
+#                     समाप्ति तिथि: कल, 26-02-2024
+
+#                     उत्पाद का नाम: गेहूं 🌾
+#                     समाप्ति तिथि: कल, 26-02-2024
+
+#                     उत्पाद का नाम: चावल 🌾
+#                     समाप्ति तिथि: कल, 26-02-2024
+
+#                     कृपया इन्हें जल्द से जल्द उपयोग करें या बाजार में बेचने के लिए विचार करें। धन्यवाद!''',
+#   to='+918657689680'
+#     )
+
+#     print(message.sid)
+
+
+
+
+# def crops(request):
+#     return render(request, 'pages/crops.html')
+
+# def fertilizer(request):
+#     return render(request, 'pages/fertilizer.html')
+
+# def seed(request):
+#     return render(request, 'pages/seed.html')
+
+# def profit(request):
+#     return render(request, 'pages/profit.html')
+
+# def utilized(request):
+#     return render(request, 'pages/utilized.html')
+
+# def table(request):
+#     return render(request, 'pages/table.html')
+
 from django.shortcuts import render
 from twilio.rest import Client
 
@@ -9,28 +67,28 @@ def season(request):
     return render(request, 'pages/season.html')
     
 def send_report_via_sms():
-    account_sid = 'AC8ff1c391e4daaab4fd0a0d0faa4bab65'
+    account_sid = 'ACc0fb9078b0a79b48380326210fa0fddc'
 
-    auth_token = '6788fb86455a09456a2be591a4165109'
+    auth_token = 'ce04d00700e943e6fcb1a465a28c0106'
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
-    from_='+19893941530',
-            body = f'''नमस्ते, आर्यन
+    from_='+15138224044',
+            body = f'''नमस्ते, Harsh
                     उत्पाद का नाम: मक्का 🌽
-                    समाप्ति तिथि: कल, 26-02-2024
+                    समाप्ति तिथि: कल, 16-05-2025
 
                     उत्पाद का नाम: ज्वार 🌱
-                    समाप्ति तिथि: कल, 26-02-2024
+                    समाप्ति तिथि: कल, 16-05-2025
 
                     उत्पाद का नाम: गेहूं 🌾
-                    समाप्ति तिथि: कल, 26-02-2024
+                    समाप्ति तिथि: कल, 16-05-2025
 
                     उत्पाद का नाम: चावल 🌾
-                    समाप्ति तिथि: कल, 26-02-2024
+                    समाप्ति तिथि: कल, 16-05-2025
 
                     कृपया इन्हें जल्द से जल्द उपयोग करें या बाजार में बेचने के लिए विचार करें। धन्यवाद!''',
-  to='+918657689680'
+  to='+916202603974'
     )
 
     print(message.sid)

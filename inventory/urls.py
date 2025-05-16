@@ -20,3 +20,5 @@ urlpatterns = [
     path('weather', weather_forecast, name='weather_forecasting'),
 
 ]
+
+
