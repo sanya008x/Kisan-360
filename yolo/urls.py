@@ -6,5 +6,6 @@ from .views import out_of_stock
 
 urlpatterns = [
     path('out_of_stock', out_of_stock, name='out_of_stock'),
+   
 
 ]
