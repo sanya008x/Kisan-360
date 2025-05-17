@@ -33,9 +33,9 @@ Kisan 360 is end-to-end webportal that modernizes farming by integrating AI, AR,
 
 ## Demo Link
 
-[Link to hosted project or demo video]
+https://sujal942-kisan-360-team-ignite-app-8phtzq.streamlit.app/
 
 ## GitHub Repo
 
-[Link to main GitHub repo if code is external]
+Streamlit MVP Repo : https://github.com/Sujal942/Kisan-360_team_Ignite
 ```
