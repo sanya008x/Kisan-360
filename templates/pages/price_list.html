@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Commodity Prices</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Real-Time Commodity Prices in India</h1>
+    <table id="price-table">
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price (₹/kg)</th>
+        <th>Market</th>
+      </tr>
+      {% for price in prices %}
+      <tr>
+        <td>{{ price.name }}</td>
+        <td>{{ price.category }}</td>
+        <td>{{ price.price }}</td>
+        <td>{{ price.market }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Price Predictions (7 Days Ahead)</h2>
+    <table>
+      <tr>
+        <th>Commodity</th>
+        <th>Predicted Prices (₹/kg)</th>
+        <th>Trend</th>
+      </tr>
+      {% for pred in predictions %}
+      <tr>
+        <td>{{ pred.commodity }}</td>
+        <td>{{ pred.future_prices|join:", " }}</td>
+        <td>{{ pred.trend }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <script>
+      function updatePrices() {
+        $.getJSON("{% url 'price_api' %}", function (data) {
+          var table = $("#price-table");
+          table.find("tr:gt(0)").remove(); // Clear existing rows
+          $.each(data.prices, function (i, price) {
+            table.append(
+              "<tr>" +
+                "<td>" +
+                price.name +
+                "</td>" +
+                "<td>" +
+                price.category +
+                "</td>" +
+                "<td>" +
+                price.price +
+                "</td>" +
+                "<td>" +
+                price.market +
+                "</td>" +
+                "</tr>"
+            );
+          });
+        });
+      }
+      setInterval(updatePrices, 60000); // Update every 60 seconds
+      $(document).ready(updatePrices);
+    </script>
+  </body>
+</html>
