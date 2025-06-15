@@ -31,7 +31,7 @@ Kisan 360 is end-to-end webportal that modernizes farming by integrating AI, AR,
 - twilio - Live SMS Alerts
 - AR Visulisation - Spline 3D
 
-## Demo Link
+
 
 https://sujal942-kisan-360-team-ignite-app-8phtzq.streamlit.app/
 
