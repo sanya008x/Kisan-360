@@ -22,7 +22,7 @@ Kisan 360 is end-to-end webportal that modernizes farming by integrating AI, AR,
 🛠️ Automated Tool Crafting: Simplified creation of tools from available resources.
 🕶️ AR Visualization: Manage inventory with 3D AR models.
 
-## Tech Stack
+## Tech Stack-
 
 - Python - Django
 - Database - sqlite
